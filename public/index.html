@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>性别伦理合规审查 AGENT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="nav" id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-brand">
+                <img src="LOGO.png" alt="Logo" class="nav-logo">
+                <span class="nav-title">性别伦理合规审查AGENT</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#intro">介绍</a></li>
+                <li><a href="#process">流程</a></li>
+                <li><a href="#cases">案例</a></li>
+                <li><a href="#demo">体验</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero">
+        <div class="hero-grain"></div>
+        <div class="hero-inner">
+            <div class="hero-badge">AGENT</div>
+            <h1 class="hero-h1">性别伦理<br>合规审查</h1>
+            <p class="hero-sub">风险过滤器 + 改写助手</p>
+            <p class="hero-desc">面向公司官方账号的内容预审智能系统，在内容发布前自动识别性别偏见与公序良俗风险，提供合规改写方案。</p>
+            <div class="hero-actions">
+                <a href="#demo" class="btn btn-fill">开始体验</a>
+                <a href="#intro" class="btn btn-ghost">了解详情 ↓</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <section id="intro" class="sect">
+        <div class="wrap">
+            <div class="sect-header">
+                <span class="sect-num">01</span>
+                <div>
+                    <h2 class="sect-h2">什么是性别伦理合规审查</h2>
+                    <p class="sect-lead">一套面向公司官方账号的内容预审智能系统。它不是辩论调解员或社会议题评论员，而是一道前置的内容安全防线。</p>
+                </div>
+            </div>
+
+            <div class="goals">
+                <div class="goal">
+                    <div class="goal-marker"></div>
+                    <div class="goal-body">
+                        <h3>性别伦理</h3>
+                        <p>识别并拦截可能引发性别对立的措辞，消除无意识偏见，确保公司言论的包容性与公正性。</p>
+                    </div>
+                </div>
+                <div class="goal">
+                    <div class="goal-marker goal-marker--alt"></div>
+                    <div class="goal-body">
+                        <h3>公序良俗</h3>
+                        <p>同步审查内容是否违反社会公序良俗，确保公司言论在法律底线和道德风尚上均无瑕疵。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3 class="sub-h3">六大适用场景</h3>
+            <div class="scenes">
+                <div class="scene">
+                    <span class="scene-num">01</span>
+                    <span class="scene-name">社交媒体发文</span>
+                </div>
+                <div class="scene">
+                    <span class="scene-num">02</span>
+                    <span class="scene-name">对外公告与声明</span>
+                </div>
+                <div class="scene">
+                    <span class="scene-num">03</span>
+                    <span class="scene-name">产品宣传文案</span>
+                </div>
+                <div class="scene">
+                    <span class="scene-num">04</span>
+                    <span class="scene-name">招聘与雇主品牌</span>
+                </div>
+                <div class="scene">
+                    <span class="scene-num">05</span>
+                    <span class="scene-name">客服自动回复</span>
+                </div>
+                <div class="scene">
+                    <span class="scene-num">06</span>
+                    <span class="scene-name">品牌联名/活动宣传</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="principles" class="sect sect--dark">
+        <div class="wrap">
+            <div class="sect-header sect-header--light">
+                <span class="sect-num sect-num--light">02</span>
+                <div>
+                    <h2 class="sect-h2 sect-h2--light">六大审查原则</h2>
+                    <p class="sect-lead sect-lead--light">所有审查判定均基于以下六项基本原则，它们是知识库的上位准则。</p>
+                </div>
+            </div>
+
+            <div class="principles">
+                <div class="principle" onclick="togglePrinciple(this)">
+                    <div class="principle-head">
+                        <span class="principle-idx">01</span>
+                        <span class="principle-name">不强化性别刻板印象</span>
+                        <span class="principle-toggle">+</span>
+                    </div>
+                    <div class="principle-detail">
+                        <p>避免暗示"全体男性都……""女性天生就……"等对全性别进行特征归因的表述。不将特定性格、能力、角色与某一性别绑定。</p>
+                    </div>
+                </div>
+                <div class="principle" onclick="togglePrinciple(this)">
+                    <div class="principle-head">
+                        <span class="principle-idx">02</span>
+                        <span class="principle-name">不对立归因</span>
+                        <span class="principle-toggle">+</span>
+                    </div>
+                    <div class="principle-detail">
+                        <p>不把一个群体的负面行为归因于整个性别，不构建"受害者 vs 压迫者"的二元框架。避免将社会问题简化为性别对立。</p>
+                    </div>
+                </div>
+                <div class="principle" onclick="togglePrinciple(this)">
+                    <div class="principle-head">
+                        <span class="principle-idx">03</span>
+                        <span class="principle-name">区分"事实陈述"与"价值评判"</span>
+                        <span class="principle-toggle">+</span>
+                    </div>
+                    <div class="principle-detail">
+                        <p>允许有可靠数据支撑的客观事实陈述，禁止带有价值判断的性别评价性表述。事实需要注明来源，价值评判应替换为中性描述。</p>
+                    </div>
+                </div>
+                <div class="principle" onclick="togglePrinciple(this)">
+                    <div class="principle-head">
+                        <span class="principle-idx">04</span>
+                        <span class="principle-name">公司言论的"安全边界"</span>
+                        <span class="principle-toggle">+</span>
+                    </div>
+                    <div class="principle-detail">
+                        <p>公司官方发言只讨论产品与服务、社会责任与ESG行动、通用价值观，不站队、不挑起性别政治争论。</p>
+                    </div>
+                </div>
+                <div class="principle" onclick="togglePrinciple(this)">
+                    <div class="principle-head">
+                        <span class="principle-idx">05</span>
+                        <span class="principle-name">具体化 → 中性化 → 均衡化</span>
+                        <span class="principle-toggle">+</span>
+                    </div>
+                    <div class="principle-detail">
+                        <p>涉及性别话题时，按三步处理：具体化表述（避免泛化归因）、使用中性词汇（去除性别标签）、均衡对称举例（确保多角度呈现）。</p>
+                    </div>
+                </div>
+                <div class="principle" onclick="togglePrinciple(this)">
+                    <div class="principle-head">
+                        <span class="principle-idx">06</span>
+                        <span class="principle-name">遵守社会公序良俗</span>
+                        <span class="principle-toggle">+</span>
+                    </div>
+                    <div class="principle-detail">
+                        <p>所有对外内容必须遵守公共秩序和善良风俗，公序良俗审查优先于性别伦理审查。任何违反法律法规和社会公德的内容均须立即拦截。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="risk" class="sect">
+        <div class="wrap">
+            <div class="sect-header">
+                <span class="sect-num">03</span>
+                <div>
+                    <h2 class="sect-h2">四级风险判定</h2>
+                    <p class="sect-lead">摒弃"通过/不通过"的二元判定，采用四色等级系统对不同风险采取差异化处理。</p>
+                </div>
+            </div>
+
+            <div class="risk-table">
+                <div class="risk-row risk-row--red">
+                    <div class="risk-dot"></div>
+                    <div class="risk-label">拦截</div>
+                    <div class="risk-sev">极高</div>
+                    <div class="risk-action">拒绝发布，强制删除或完全重写</div>
+                </div>
+                <div class="risk-row risk-row--orange">
+                    <div class="risk-dot"></div>
+                    <div class="risk-label">高可疑</div>
+                    <div class="risk-sev">高</div>
+                    <div class="risk-action">强制提醒修改，提供改写方案</div>
+                </div>
+                <div class="risk-row risk-row--yellow">
+                    <div class="risk-dot"></div>
+                    <div class="risk-label">需复审</div>
+                    <div class="risk-sev">中</div>
+                    <div class="risk-action">标注风险点，建议人工复审确认</div>
+                </div>
+                <div class="risk-row risk-row--green">
+                    <div class="risk-dot"></div>
+                    <div class="risk-label">安全</div>
+                    <div class="risk-sev">无</div>
+                    <div class="risk-action">直接通过</div>
+                </div>
+            </div>
+            <p class="risk-note">当同时涉及性别伦理和公序良俗两个维度时，最终等级取两者中的最高等级。</p>
+        </div>
+    </section>
+
+    <section id="process" class="sect sect--alt">
+        <div class="wrap">
+            <div class="sect-header">
+                <span class="sect-num">04</span>
+                <div>
+                    <h2 class="sect-h2">审查流程</h2>
+                    <p class="sect-lead">公序良俗审查作为前置安全门，通过后再进入性别伦理专项深度审查，形成分层递进式架构。</p>
+                </div>
+            </div>
+
+            <div class="flow">
+                <div class="flow-step">
+                    <div class="flow-idx">0</div>
+                    <div class="flow-body">
+                        <h4>公序良俗预检</h4>
+                        <p>违反公序良俗？→ 直接拦截</p>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-idx">1</div>
+                    <div class="flow-body">
+                        <h4>高风险词汇扫描</h4>
+                        <p>触发红色/橙色 → 拦截或强制提醒</p>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-idx">2</div>
+                    <div class="flow-body">
+                        <h4>无意识偏见模式检测</h4>
+                        <p>触发黄色 → 标注并建议修改</p>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-idx">3</div>
+                    <div class="flow-body">
+                        <h4>事实预设核查</h4>
+                        <p>对照事实库修正错误预设</p>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-idx">4</div>
+                    <div class="flow-body">
+                        <h4>地域/文化差异适配</h4>
+                        <p>根据平台特征调整建议</p>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-idx">5</div>
+                    <div class="flow-body">
+                        <h4>合并审查结果</h4>
+                        <p>取最高等级作为最终结论</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scan" class="sect">
+        <div class="wrap">
+            <div class="sect-header">
+                <span class="sect-num">05</span>
+                <div>
+                    <h2 class="sect-h2">三大扫描层级</h2>
+                    <p class="sect-lead">从高到低的三级扫描优先级，P0 确保红线零遗漏，P1 提供改写空间，P2 捕捉无意识偏见。</p>
+                </div>
+            </div>
+
+            <div class="scans">
+                <div class="scan">
+                    <div class="scan-head">
+                        <span class="scan-badge scan-badge--red">P0</span>
+                        <h3 class="scan-title">绝对禁止类</h3>
+                        <span class="scan-level">→ 红色拦截</span>
+                    </div>
+                    <ul class="scan-list">
+                        <li>全性别贬低与侮辱性泛称</li>
+                        <li>性别与智力/能力/诚信直接挂钩</li>
+                        <li>以公司身份站队极端男权/女权派别</li>
+                        <li>性别与其他身份维度的交叉歧视</li>
+                    </ul>
+                </div>
+                <div class="scan">
+                    <div class="scan-head">
+                        <span class="scan-badge scan-badge--orange">P1</span>
+                        <h3 class="scan-title">高风险对立词</h3>
+                        <span class="scan-level">→ 橙色高可疑</span>
+                    </div>
+                    <ul class="scan-list">
+                        <li>标签化侮辱性词汇（"普信男""小仙女""直男癌""剩女""女拳"等12个）</li>
+                        <li>隐含性别角色标准的句式</li>
+                        <li>单一性别强调</li>
+                    </ul>
+                </div>
+                <div class="scan">
+                    <div class="scan-head">
+                        <span class="scan-badge scan-badge--yellow">P2</span>
+                        <h3 class="scan-title">无意识偏见</h3>
+                        <span class="scan-level">→ 黄色需复审</span>
+                    </div>
+                    <ul class="scan-list">
+                        <li>默认性别设定</li>
+                        <li>角色分配偏见</li>
+                        <li>双重标准</li>
+                        <li>英雄/受害者框架</li>
+                        <li>外貌/年龄偏见</li>
+                        <li>亲属称谓替代职业称谓</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="knowledge" class="sect sect--dark">
+        <div class="wrap">
+            <div class="sect-header sect-header--light">
+                <span class="sect-num sect-num--light">06</span>
+                <div>
+                    <h2 class="sect-h2 sect-h2--light">知识库架构</h2>
+                    <p class="sect-lead sect-lead--light">12 个结构化知识库文件，按"规则层 → 知识层 → 实践层 → 元层"四层分级组织。</p>
+                </div>
+            </div>
+
+            <div class="kb">
+                <div class="kb-row">
+                    <div class="kb-layer-label">元层</div>
+                    <div class="kb-items">
+                        <span class="kb-tag">06-知识库边界与维护指南</span>
+                        <span class="kb-tag">11-Agent工作流设计指南</span>
+                    </div>
+                </div>
+                <div class="kb-row">
+                    <div class="kb-layer-label">实践层</div>
+                    <div class="kb-items">
+                        <span class="kb-tag">04-安全改写示例库</span>
+                        <span class="kb-tag">05-地域与文化差异库</span>
+                    </div>
+                </div>
+                <div class="kb-row">
+                    <div class="kb-layer-label">知识层</div>
+                    <div class="kb-items">
+                        <span class="kb-tag">02-事实对照库</span>
+                        <span class="kb-tag">07-公序良俗审查补充</span>
+                        <span class="kb-tag">08-短视频审核细则</span>
+                        <span class="kb-tag">09-广告法</span>
+                        <span class="kb-tag">10-妇女权益保障法</span>
+                    </div>
+                </div>
+                <div class="kb-row">
+                    <div class="kb-layer-label">规则层</div>
+                    <div class="kb-items">
+                        <span class="kb-tag">00-总纲与核心原则</span>
+                        <span class="kb-tag">01-高风险词汇与模式库</span>
+                        <span class="kb-tag">03-风险等级与处理逻辑</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cases" class="sect">
+        <div class="wrap">
+            <div class="sect-header">
+                <span class="sect-num">07</span>
+                <div>
+                    <h2 class="sect-h2">真实案例审查效果</h2>
+                    <p class="sect-lead">5 个真实品牌案例验证，涵盖 2020–2026 年间的实际品牌争议事件。</p>
+                </div>
+            </div>
+
+            <div class="cases">
+                <article class="case" onclick="toggleCase(this)">
+                    <div class="case-head">
+                        <span class="case-badge case-badge--red"></span>
+                        <span class="case-brand">OPPO</span>
+                        <span class="case-year">2026</span>
+                        <span class="case-name">母亲节文案</span>
+                        <span class="case-toggle">+</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-block case-block--orig">
+                            <div class="case-label">原文</div>
+                            <p>"我妈有两个'老公'，一个是我爸，另一个一年见两回。跟我爸约会基本不打扮，见另一个，她恨不得把衣柜翻个底朝天。"</p>
+                        </div>
+                        <div class="case-block case-block--risk">
+                            <div class="case-label">风险识别</div>
+                            <p>性别刻板印象与对立煽动(高) + 公序良俗(高)</p>
+                        </div>
+                        <div class="case-block case-block--fix">
+                            <div class="case-label">改写建议</div>
+                            <p>"我的父母感情深厚，相处自然舒适。每年有两次重要的家庭聚会，妈妈都会格外重视，精心准备。"</p>
+                        </div>
+                        <div class="case-block">
+                            <div class="case-label">审查逻辑</div>
+                            <p>删除具有误导性的"两个老公"表述，将焦点从对母亲个人行为的评判转向对家庭情感和重要时刻的正面描述</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case" onclick="toggleCase(this)">
+                    <div class="case-head">
+                        <span class="case-badge case-badge--yellow"></span>
+                        <span class="case-brand">蓝月亮</span>
+                        <span class="case-year">2024</span>
+                        <span class="case-name">母亲节文案</span>
+                        <span class="case-toggle">+</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-block case-block--orig">
+                            <div class="case-label">原文</div>
+                            <p>"妈妈，您先用"、"让妈妈洗衣更轻松"</p>
+                        </div>
+                        <div class="case-block case-block--risk">
+                            <div class="case-label">风险识别</div>
+                            <p>角色刻板印象(中)</p>
+                        </div>
+                        <div class="case-block case-block--fix">
+                            <div class="case-label">改写建议</div>
+                            <p>"家人，您先用" / "让全家洗衣更轻松"</p>
+                        </div>
+                        <div class="case-block">
+                            <div class="case-label">审查逻辑</div>
+                            <p>将特定性别角色替换为中性或包容性称谓</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case" onclick="toggleCase(this)">
+                    <div class="case-head">
+                        <span class="case-badge case-badge--yellow"></span>
+                        <span class="case-brand">爸爸糖</span>
+                        <span class="case-year">2020</span>
+                        <span class="case-name">吐司广告语</span>
+                        <span class="case-toggle">+</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-block case-block--orig">
+                            <div class="case-label">原文</div>
+                            <p>"用爸爸的标准，做一片好吐司"</p>
+                        </div>
+                        <div class="case-block case-block--risk">
+                            <div class="case-label">风险识别</div>
+                            <p>角色刻板印象(低)</p>
+                        </div>
+                        <div class="case-block case-block--fix">
+                            <div class="case-label">改写建议</div>
+                            <p>"用家人的标准，做一片好吐司" 或 "用爱的标准，做一片好吐司"</p>
+                        </div>
+                        <div class="case-block">
+                            <div class="case-label">审查逻辑</div>
+                            <p>将特定性别角色替换为中性或更具情感包容性的词汇</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case" onclick="toggleCase(this)">
+                    <div class="case-head">
+                        <span class="case-badge case-badge--orange"></span>
+                        <span class="case-brand">极氪汽车</span>
+                        <span class="case-year">2026</span>
+                        <span class="case-name">妇女节视频</span>
+                        <span class="case-toggle">+</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-block case-block--orig">
+                            <div class="case-label">原文</div>
+                            <p>"我们这个行业女性普遍比较少，每天上班电梯里都是男的"、"过去大家认为车是男人的游戏"、"女性不该只坐副驾"</p>
+                        </div>
+                        <div class="case-block case-block--risk">
+                            <div class="case-label">风险识别</div>
+                            <p>角色刻板印象(中) + 能力偏见/对立煽动(低至中)</p>
+                        </div>
+                        <div class="case-block case-block--fix">
+                            <div class="case-label">改写建议</div>
+                            <p>"过去，汽车世界常常被描绘为单一的图景" / "我们正致力于让这个行业的风景更加多元" / "驾驭方向，是一种自由的选择"</p>
+                        </div>
+                        <div class="case-block">
+                            <div class="case-label">审查逻辑</div>
+                            <p>从"否定现状"转向"表达愿景"，从"否定式说教"转向"肯定式赋能"</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case" onclick="toggleCase(this)">
+                    <div class="case-head">
+                        <span class="case-badge case-badge--red"></span>
+                        <span class="case-brand">奔驰</span>
+                        <span class="case-year">2021</span>
+                        <span class="case-name">杨笠视频事件</span>
+                        <span class="case-toggle">+</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-block case-block--orig">
+                            <div class="case-label">原文</div>
+                            <p>杨笠从红毯走进奔驰车，配文"舒适新篇章"</p>
+                        </div>
+                        <div class="case-block case-block--risk">
+                            <div class="case-label">风险识别</div>
+                            <p>对立煽动/潜在性别歧视关联风险(高)</p>
+                        </div>
+                        <div class="case-block case-block--fix">
+                            <div class="case-label">改写建议</div>
+                            <p>选择争议性较低的合作方；若仍决定合作，文案应严格聚焦产品功能</p>
+                        </div>
+                        <div class="case-block">
+                            <div class="case-label">审查逻辑</div>
+                            <p>单看文案无直接问题，但整体营销行为因合作对象的特殊性构成高风险</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="rewrite" class="sect sect--alt">
+        <div class="wrap">
+            <div class="sect-header">
+                <span class="sect-num">08</span>
+                <div>
+                    <h2 class="sect-h2">安全改写能力</h2>
+                    <p class="sect-lead">覆盖 9 大业务场景的改写示例库，检测到风险后提供精准的改写建议。</p>
+                </div>
+            </div>
+
+            <div class="rewrites">
+                <div class="rw">
+                    <div class="rw-scene">活动宣传</div>
+                    <div class="rw-pair">
+                        <span class="rw-from">"欢迎各位小仙女"</span>
+                        <span class="rw-arrow">→</span>
+                        <span class="rw-to">"欢迎所有感兴趣的朋友"</span>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="rw-scene">争议回应</div>
+                    <div class="rw-pair">
+                        <span class="rw-from">"有些人太敏感了"</span>
+                        <span class="rw-arrow">→</span>
+                        <span class="rw-to">"我们重视每一位用户的反馈"</span>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="rw-scene">职场平等承诺</div>
+                    <div class="rw-pair">
+                        <span class="rw-from">"男女完全平等"</span>
+                        <span class="rw-arrow">→</span>
+                        <span class="rw-to">"致力于消除晋升中的无意识偏见"</span>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="rw-scene">产品功能介绍</div>
+                    <div class="rw-pair">
+                        <span class="rw-from">"男性版更强力，女性版更可爱"</span>
+                        <span class="rw-arrow">→</span>
+                        <span class="rw-to">"标准版和轻享版按功能分类"</span>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="rw-scene">客服自动回复</div>
+                    <div class="rw-pair">
+                        <span class="rw-from">"小仙女要开心哦"</span>
+                        <span class="rw-arrow">→</span>
+                        <span class="rw-to">"您好，非常抱歉给您带来了不愉快的体验"</span>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="rw-scene">品牌价值观声明</div>
+                    <div class="rw-pair">
+                        <span class="rw-from">"不论男女，一视同仁"</span>
+                        <span class="rw-arrow">→</span>
+                        <span class="rw-to">"致力于营造尊重包容的环境"</span>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="rw-scene">技术与行业内容</div>
+                    <div class="rw-pair">
+                        <span class="rw-from">"程序猿/程序媛"</span>
+                        <span class="rw-arrow">→</span>
+                        <span class="rw-to">"软件开发工程师"</span>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="rw-scene">教育与科普内容</div>
+                    <div class="rw-pair">
+                        <span class="rw-from">"鼓励女孩子学编程"</span>
+                        <span class="rw-arrow">→</span>
+                        <span class="rw-to">"鼓励更多学生接触编程教育"</span>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="rw-scene">公关声明与危机公关</div>
+                    <div class="rw-pair">
+                        <span class="rw-from">"有人恶意抹黑"</span>
+                        <span class="rw-arrow">→</span>
+                        <span class="rw-to">"已启动内部调查，承诺公布结果"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="platforms" class="sect">
+        <div class="wrap">
+            <div class="sect-header">
+                <span class="sect-num">09</span>
+                <div>
+                    <h2 class="sect-h2">跨平台敏感度适配</h2>
+                    <p class="sect-lead">针对不同社交平台的用户特征和文化语境，提供差异化的审查建议。</p>
+                </div>
+            </div>
+
+            <div class="platforms">
+                <div class="plat">
+                    <div class="plat-head">
+                        <span class="plat-name">微博</span>
+                        <span class="plat-level">高</span>
+                    </div>
+                    <div class="plat-bar"><div class="plat-fill" style="width:90%"></div></div>
+                    <p class="plat-note">不参与性别相关热搜，防截图二次传播</p>
+                </div>
+                <div class="plat">
+                    <div class="plat-head">
+                        <span class="plat-name">小红书</span>
+                        <span class="plat-level">中高</span>
+                    </div>
+                    <div class="plat-bar"><div class="plat-fill" style="width:75%"></div></div>
+                    <p class="plat-note">避免"姐妹""集美"等限定性称谓</p>
+                </div>
+                <div class="plat">
+                    <div class="plat-head">
+                        <span class="plat-name">抖音</span>
+                        <span class="plat-level">中</span>
+                    </div>
+                    <div class="plat-bar"><div class="plat-fill" style="width:60%"></div></div>
+                    <p class="plat-note">注意AI语音/字幕中的性别偏见</p>
+                </div>
+                <div class="plat">
+                    <div class="plat-head">
+                        <span class="plat-name">知乎</span>
+                        <span class="plat-level">高</span>
+                    </div>
+                    <div class="plat-bar"><div class="plat-fill" style="width:85%"></div></div>
+                    <p class="plat-note">必须有数据支撑，避免价值判断</p>
+                </div>
+                <div class="plat">
+                    <div class="plat-head">
+                        <span class="plat-name">微信公众号</span>
+                        <span class="plat-level">中</span>
+                    </div>
+                    <div class="plat-bar"><div class="plat-fill" style="width:55%"></div></div>
+                    <p class="plat-note">评论区精选留言也需要审查</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="legal-grid">
+                <div class="legal-item">
+                    <span class="legal-name">《广告法》第9条</span>
+                    <span class="legal-desc">明确禁止含有性别歧视内容的广告</span>
+                </div>
+                <div class="legal-item">
+                    <span class="legal-name">《妇女权益保障法》第2条</span>
+                    <span class="legal-desc">男女平等是国家的基本国策</span>
+                </div>
+                <div class="legal-item">
+                    <span class="legal-name">《妇女权益保障法》第20/28条</span>
+                    <span class="legal-desc">禁止贬低损害妇女人格尊严</span>
+                </div>
+                <div class="legal-item">
+                    <span class="legal-name">《妇女权益保障法》第43条</span>
+                    <span class="legal-desc">招聘中不得限定男性优先或性别歧视</span>
+                </div>
+                <div class="legal-item">
+                    <span class="legal-name">《民法典》第8/153条</span>
+                    <span class="legal-desc">公序良俗是民事活动的基本底线</span>
+                </div>
+                <div class="legal-item">
+                    <span class="legal-name">《网络安全法》第12条</span>
+                    <span class="legal-desc">网络信息发布须遵守公共秩序和社会公德</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="sect sect--dark">
+        <div class="wrap">
+            <div class="sect-header sect-header--light">
+                <span class="sect-num sect-num--light">10</span>
+                <div>
+                    <h2 class="sect-h2 sect-h2--light">在线体验</h2>
+                    <p class="sect-lead sect-lead--light">输入待审查文本，选择目标发布平台，体验 Agent 的实时审查能力。</p>
+                </div>
+            </div>
+
+            <div class="demo">
+                <div class="demo-field">
+                    <label for="demo-input" class="demo-label">待审查文本</label>
+                    <textarea id="demo-input" class="demo-textarea" placeholder="请输入待审查的文本内容..." rows="5"></textarea>
+                </div>
+                <div class="demo-row">
+                    <div class="demo-field demo-field--sm">
+                        <label for="demo-platform" class="demo-label">目标平台</label>
+                        <select id="demo-platform" class="demo-select">
+                            <option value="微博">微博</option>
+                            <option value="小红书">小红书</option>
+                            <option value="抖音">抖音</option>
+                            <option value="知乎">知乎</option>
+                            <option value="微信公众号">微信公众号</option>
+                        </select>
+                    </div>
+                    <div class="demo-field demo-field--sm demo-field--btn">
+                        <button id="demo-submit" class="btn btn-fill">提交审查</button>
+                    </div>
+                </div>
+                <div id="demo-loading" class="demo-loading">
+                    <div class="ai-brain">
+                        <div class="ai-brain-ring"></div>
+                        <div class="ai-brain-ring"></div>
+                        <div class="ai-brain-core"></div>
+                    </div>
+                    <span class="demo-loading-text" id="demo-loading-text">思考中...</span>
+                    <div class="demo-loading-steps" id="demo-loading-steps"></div>
+                </div>
+                <div id="demo-result" class="demo-result"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="foot">
+        <div class="wrap">
+            <div class="foot-inner">
+                <div class="foot-brand">
+                    <img src="LOGO.png" alt="Logo" class="foot-logo">
+                    <span>性别伦理合规审查 AGENT</span>
+                </div>
+                <p class="foot-tagline">合规 · 包容 · 安全</p>
+                <p class="foot-copy">&copy; 2026 性别伦理合规审查 AGENT</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

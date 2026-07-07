@@ -1,0 +1,12 @@
+# 环境变量（含 API 密钥，切勿上传）
+.env
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# 二维码（自动生成）
+public/qr.png
+
+# wrangler 本地缓存
+.wrangler/

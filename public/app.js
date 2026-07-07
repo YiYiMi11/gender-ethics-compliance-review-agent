@@ -64,6 +64,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var demoPlatform = document.getElementById('demo-platform');
     var demoLoading = document.getElementById('demo-loading');
     var demoLoadingText = document.getElementById('demo-loading-text');
+
+    // Preset text buttons – fill textarea on click
+    document.querySelectorAll('.demo-preset').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            demoInput.value = this.getAttribute('data-text');
+            demoInput.focus();
+        });
+    });
     var demoLoadingSteps = document.getElementById('demo-loading-steps');
     var demoResult = document.getElementById('demo-result');
 

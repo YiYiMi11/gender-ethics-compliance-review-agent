@@ -10,3 +10,6 @@ public/qr.png
 
 # wrangler 本地缓存
 .wrangler/
+
+# macOS
+.DS_Store

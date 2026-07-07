@@ -2,9 +2,25 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const os = require('os');
+const QRCode = require('qrcode');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const HOST = '0.0.0.0';
+
+function getLocalIPs() {
+  const ips = [];
+  const interfaces = os.networkInterfaces();
+  for (const name of Object.keys(interfaces)) {
+    for (const iface of interfaces[name]) {
+      if (iface.family === 'IPv4' && !iface.internal) {
+        ips.push({ name, address: iface.address });
+      }
+    }
+  }
+  return ips;
+}
 const API_BASE = process.env.API_BASE_URL;
 const API_KEY = process.env.API_KEY;
 
@@ -183,8 +199,33 @@ app.post('/api/chat', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`[${ts()}] Server running at http://localhost:${PORT}`);
+app.listen(PORT, HOST, async () => {
+  const ips = getLocalIPs();
+  ips.forEach(ip => {
+    console.log(`[${ts()}] Network access: http://${ip.address}:${PORT}  (${ip.name})`);
+  });
+
+  // Select hotspot IP (192.168.137.x) or first non-internal IP
+  const hotspotIP = ips.find(ip => ip.address.startsWith('192.168.137.')) || ips[0];
+  if (hotspotIP) {
+    const url = `http://${hotspotIP.address}:${PORT}`;
+    try {
+      const qr = await QRCode.toString(url, { type: 'terminal', small: true });
+      console.log(`[${ts()}] QR code for ${url}:`);
+      console.log(qr);
+      // Save QR code as PNG for web display
+      await QRCode.toFile(path.join(__dirname, 'public', 'qr.png'), url, {
+        width: 400,
+        margin: 2,
+        color: { dark: '#000000', light: '#ffffff' }
+      });
+      console.log(`[${ts()}] QR code saved to public/qr.png`);
+    } catch (err) {
+      console.error(`[${ts()}] Failed to generate QR code:`, err.message);
+    }
+  }
+
+  console.log(`[${ts()}] Make sure Windows Firewall allows port ${PORT} for other devices to connect`);
   console.log(`[${ts()}] API_BASE=${API_BASE}`);
   console.log(`[${ts()}] API_KEY=${API_KEY.substring(0, 6)}...`);
 });

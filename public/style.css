@@ -227,6 +227,24 @@ a:hover { color: var(--text); }
 
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
+.hero-qr {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.hero-qr-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    border: 2px solid var(--text-3);
+    background: #fff;
+}
+.hero-qr-label {
+    font-size: 0.8125rem;
+    color: var(--text-3);
+}
+
 .hero-scroll {
     position: absolute;
     bottom: 40px;

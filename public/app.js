@@ -375,6 +375,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         challengeRank.textContent = rank;
 
+        // QR code between score and review
+        var qrHtml = '<div class="challenge-qr">' +
+            '<img src="二维码.jpg" alt="扫码体验" class="challenge-qr-img">' +
+            '<div class="challenge-qr-text">' +
+            '<span>扫码立即体验</span>' +
+            '<span>参与性别伦理审查官挑战</span>' +
+            '</div>' +
+            '</div>';
+        challengeRank.insertAdjacentHTML('afterend', qrHtml);
+
         var reviewHtml = '<h3 class="challenge-review-title">答题回顾</h3>';
         for (var i = 0; i < challengeData.length; i++) {
             var d = challengeData[i];

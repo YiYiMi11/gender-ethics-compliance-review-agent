@@ -1470,10 +1470,40 @@ a:hover { color: var(--text); }
     font-size: 1.125rem;
     font-weight: 500;
     color: var(--text-2);
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
-.challenge-review {
+.challenge-qr {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--bg-dark2);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 28px;
+}
+.challenge-qr-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background: #fff;
+    flex-shrink: 0;
+}
+.challenge-qr-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.875rem;
+    color: var(--text-light2);
+    line-height: 1.4;
+}
+.challenge-qr-text span:first-child {
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.challenge-review-title {
     display: flex;
     flex-direction: column;
     gap: 12px;

@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ===== 性别伦理审查官挑战 =====
+    // ===== 性别议题包容性校验挑战 =====
     var challengeData = [
         {
             scenario: '某手机品牌广告中，一名男性用手比划女性身体部位介绍新机型。',
@@ -365,9 +365,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var rank = '';
         if (score >= 90) {
-            rank = '🌟 性别伦理专家级！你具备专业的合规审查能力！';
+            rank = '🌟 性别包容性专家级！你具备专业的审查能力！';
         } else if (score >= 70) {
-            rank = '👍 优秀！你对性别伦理合规有较好的理解！';
+            rank = '👍 优秀！你对性别议题包容性有较好的理解！';
         } else if (score >= 50) {
             rank = '📖 及格！建议多学习真实案例提升审查能力。';
         } else {
@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function () {
             '<img src="二维码.jpg" alt="扫码体验" class="challenge-qr-img">' +
             '<div class="challenge-qr-text">' +
             '<span>扫码立即体验</span>' +
-            '<span>参与性别伦理审查官挑战</span>' +
+            '<span>参与性别议题包容性校验挑战</span>' +
             '</div>' +
             '</div>';
         challengeRank.insertAdjacentHTML('afterend', qrHtml);

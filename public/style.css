@@ -246,7 +246,7 @@ a:hover { color: var(--text); }
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 28px 22px 22px;
+    padding: 24px 22px;
     background: rgba(28,25,23,0.15);
     backdrop-filter: blur(24px) saturate(1.8);
     -webkit-backdrop-filter: blur(24px) saturate(1.8);
@@ -263,19 +263,24 @@ a:hover { color: var(--text); }
 .qr-float-close {
     position: absolute;
     top: 6px;
-    right: 8px;
-    background: none;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
     border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    opacity: 0.5;
-    transition: opacity .2s;
-    padding: 2px 6px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 0.75rem;
     line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
+    text-shadow: none;
 }
 .qr-float-close:hover {
-    opacity: 1;
+    background: rgba(255,255,255,0.3);
 }
 @keyframes qrFloatIn {
     from { opacity: 0; transform: translateY(-50%) translateX(20px); }
@@ -309,6 +314,7 @@ a:hover { color: var(--text); }
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 2px;
 }
 
@@ -328,6 +334,7 @@ a:hover { color: var(--text); }
     0%, 100% { box-shadow: 0 0 20px rgba(185,28,28,.3); }
     50% { box-shadow: 0 0 36px rgba(185,28,28,.6); }
 }
+
 
 .hero-scroll {
     position: absolute;
@@ -1147,6 +1154,7 @@ a:hover { color: var(--text); }
     opacity: 0.5;
 }
 
+/* ===== Challenge Quiz Modal ===== */
 .challenge-overlay {
     position: fixed;
     inset: 0;
@@ -1161,10 +1169,12 @@ a:hover { color: var(--text); }
 .challenge-overlay.active {
     display: flex;
 }
+
 @keyframes challengeFadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
 .challenge-modal {
     position: relative;
     width: 100%;
@@ -1177,10 +1187,12 @@ a:hover { color: var(--text); }
     color: var(--text-light);
     animation: challengeSlideUp 0.3s ease;
 }
+
 @keyframes challengeSlideUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 .challenge-close {
     position: absolute;
     top: 16px;
@@ -1198,15 +1210,18 @@ a:hover { color: var(--text); }
     cursor: pointer;
     transition: all 0.2s;
 }
+
 .challenge-close:hover {
     color: #fff;
     border-color: var(--text-light2);
     background: rgba(255,255,255,0.06);
 }
+
 .challenge-header {
     text-align: center;
     margin-bottom: 32px;
 }
+
 .challenge-title {
     font-family: var(--serif);
     font-size: 1.5rem;
@@ -1214,27 +1229,32 @@ a:hover { color: var(--text); }
     color: #fff;
     margin-bottom: 8px;
 }
+
 .challenge-desc {
     font-size: 0.875rem;
     color: var(--text-3);
     line-height: 1.7;
 }
+
 .challenge-body {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
+
 .challenge-progress {
     display: flex;
     align-items: center;
     gap: 12px;
 }
+
 .challenge-progress-text {
     font-size: 0.8125rem;
     font-weight: 600;
     color: var(--text-2);
     white-space: nowrap;
 }
+
 .challenge-progress-bar {
     flex: 1;
     height: 4px;
@@ -1242,17 +1262,20 @@ a:hover { color: var(--text); }
     border-radius: 2px;
     overflow: hidden;
 }
+
 .challenge-progress-fill {
     height: 100%;
     background: var(--accent);
     border-radius: 2px;
     transition: width 0.5s ease;
 }
+
 .challenge-question {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
+
 .challenge-scenario {
     font-size: 0.9375rem;
     color: var(--text-3);
@@ -1262,6 +1285,7 @@ a:hover { color: var(--text); }
     border-radius: 8px;
     border-left: 3px solid var(--accent);
 }
+
 .challenge-q-text {
     font-family: var(--serif);
     font-size: 1.125rem;
@@ -1269,11 +1293,13 @@ a:hover { color: var(--text); }
     color: var(--text-light);
     line-height: 1.6;
 }
+
 .challenge-options {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .challenge-option {
     display: block;
     width: 100%;
@@ -1289,38 +1315,45 @@ a:hover { color: var(--text); }
     transition: all 0.2s ease;
     line-height: 1.6;
 }
+
 .challenge-option:hover {
     border-color: var(--text-3);
     background: rgba(255,255,255,0.03);
 }
+
 .challenge-option.selected {
     border-color: var(--accent);
     background: rgba(185, 28, 28, 0.1);
     box-shadow: 0 0 0 1px var(--accent), 0 0 12px rgba(185, 28, 28, 0.15);
     color: #fff;
 }
+
 .challenge-option.correct {
     border-color: var(--green);
     background: rgba(22, 163, 74, 0.12);
     box-shadow: 0 0 0 1px var(--green);
     color: #fff;
 }
+
 .challenge-option.wrong {
     border-color: var(--red);
     background: rgba(220, 38, 38, 0.12);
     box-shadow: 0 0 0 1px var(--red);
     color: #fff;
 }
+
 .challenge-option:disabled {
     cursor: default;
     opacity: 0.7;
 }
+
 .challenge-nav {
     display: flex;
     justify-content: space-between;
     gap: 12px;
     margin-top: 8px;
 }
+
 .challenge-nav-btn {
     padding: 10px 28px;
     font-family: var(--sans);
@@ -1332,40 +1365,51 @@ a:hover { color: var(--text); }
     cursor: pointer;
     transition: all 0.2s ease;
 }
+
 .challenge-nav-btn:active {
     transform: scale(0.98);
 }
+
 .challenge-nav-btn--prev {
     background: transparent;
     color: var(--text-3);
     border: 1px solid rgba(255,255,255,0.1);
 }
+
 .challenge-nav-btn--prev:hover {
     color: var(--text-light);
     border-color: var(--text-3);
 }
+
 .challenge-nav-btn--next {
     background: var(--accent);
     color: #fff;
 }
+
 .challenge-nav-btn--next:hover {
     background: #991b1b;
 }
+
 .challenge-nav-btn--submit {
     background: var(--green);
     color: #fff;
 }
+
 .challenge-nav-btn--submit:hover {
     background: #15803d;
 }
+
 .challenge-nav-btn:disabled {
     opacity: 0.4;
     cursor: not-allowed;
 }
+
+/* Result Area */
 .challenge-result {
     text-align: center;
     padding: 24px 0;
 }
+
 .challenge-score {
     font-family: var(--serif);
     font-size: 4rem;
@@ -1374,23 +1418,27 @@ a:hover { color: var(--text); }
     line-height: 1;
     margin-bottom: 8px;
 }
+
 .challenge-score span {
     font-size: 1.5rem;
     color: var(--text-3);
     font-weight: 500;
 }
+
 .challenge-rank {
     font-size: 1.125rem;
     font-weight: 500;
     color: var(--text-2);
     margin-bottom: 32px;
 }
+
 .challenge-review {
     display: flex;
     flex-direction: column;
     gap: 12px;
     text-align: left;
 }
+
 .challenge-review-item {
     padding: 14px 18px;
     background: var(--bg-dark2);
@@ -1400,17 +1448,21 @@ a:hover { color: var(--text); }
     color: var(--text-light2);
     line-height: 1.6;
 }
+
 .challenge-review-item.correct {
     border-left-color: var(--green);
 }
+
 .challenge-review-item.wrong {
     border-left-color: var(--red);
 }
+
 .challenge-review-q {
     font-weight: 600;
     margin-bottom: 4px;
     color: var(--text-light);
 }
+
 .challenge-review-answer {
     font-size: 0.8125rem;
     color: var(--text-3);
@@ -1439,6 +1491,37 @@ a:hover { color: var(--text); }
 }
 .challenge-review-item.wrong .challenge-review-correct {
     color: var(--green);
+}
+
+/* Challenge Quiz Modal - Mobile Responsive */
+@media (max-width: 767px) {
+    .challenge-overlay {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .challenge-modal {
+        max-height: 92vh;
+        border-radius: 12px 12px 0 0;
+        padding: 28px 20px;
+    }
+
+    .challenge-title {
+        font-size: 1.25rem;
+    }
+
+    .challenge-score {
+        font-size: 3rem;
+    }
+
+    .challenge-nav {
+        flex-direction: column;
+    }
+
+    .challenge-nav-btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1475,45 +1558,42 @@ a:hover { color: var(--text); }
     .legal-grid { grid-template-columns: 1fr; }
 
     .hero-h1 { font-size: 2.5rem; }
-    .hero-inner { padding: 100px 24px 60px; }
-
+    .hero-inner {
+        padding: 100px 24px 60px;
+        flex-direction: column;
+        gap: 28px;
+    }
     .qr-float {
         top: auto;
-        bottom: 20px;
-        right: 12px;
+        bottom: 24px;
+        right: 16px;
         transform: none;
         flex-direction: row;
-        gap: 8px;
-        padding: 10px 14px 10px 10px;
-        border-radius: 12px;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 14px;
         animation: none;
     }
     .qr-float-img {
-        width: 48px;
-        height: 48px;
-        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
     }
     .qr-float-text {
-        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
         gap: 0;
-        max-width: 120px;
+        line-height: 1.3;
     }
     .qr-float-label {
-        font-size: 0.75rem;
+        font-size: 0.8125rem;
         margin-top: 0;
-        line-height: 1.4;
     }
-    .qr-float-sub {
-        display: none;
-    }
+    .qr-float-sub,
     .qr-float-note {
         display: none;
     }
-    .qr-float-close {
-        top: 3px;
-        right: 4px;
-        font-size: 0.75rem;
-        padding: 0 4px;
+    .qr-float.qr-hidden {
+        display: none;
     }
 
     .risk-row {

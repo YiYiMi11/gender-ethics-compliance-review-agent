@@ -1194,6 +1194,27 @@ a:hover { color: var(--text); }
     color: var(--text-3);
     opacity: 0.5;
 }
+.foot-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    padding: 8px 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-light2);
+    text-decoration: none;
+    transition: all .25s;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.04);
+}
+.foot-contact:hover {
+    color: #fff;
+    border-color: var(--accent);
+    background: rgba(185,28,28,0.12);
+    box-shadow: 0 0 20px rgba(185,28,28,0.2);
+}
 
 /* ===== Challenge Quiz Modal ===== */
 .challenge-overlay {
@@ -1323,8 +1344,7 @@ a:hover { color: var(--text); }
     line-height: 1.8;
     padding: 16px 20px;
     background: var(--bg-dark2);
-    border-radius: 8px;
-    border-left: 3px solid var(--accent);
+    border-radius: 10px;
 }
 
 .challenge-q-text {
@@ -1351,35 +1371,28 @@ a:hover { color: var(--text); }
     color: var(--text-light2);
     background: var(--bg-dark2);
     border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s ease;
     line-height: 1.6;
 }
 
 .challenge-option:hover {
-    border-color: var(--text-3);
-    background: rgba(255,255,255,0.03);
+    background: rgba(255,255,255,0.06);
 }
 
 .challenge-option.selected {
-    border-color: var(--accent);
-    background: rgba(185, 28, 28, 0.1);
-    box-shadow: 0 0 0 1px var(--accent), 0 0 12px rgba(185, 28, 28, 0.15);
+    background: rgba(185,28,28,0.12);
     color: #fff;
 }
 
 .challenge-option.correct {
-    border-color: var(--green);
-    background: rgba(22, 163, 74, 0.12);
-    box-shadow: 0 0 0 1px var(--green);
+    background: rgba(22,163,74,0.1);
     color: #fff;
 }
 
 .challenge-option.wrong {
-    border-color: var(--red);
-    background: rgba(220, 38, 38, 0.12);
-    box-shadow: 0 0 0 1px var(--red);
+    background: rgba(220,38,38,0.1);
     color: #fff;
 }
 
@@ -1453,17 +1466,19 @@ a:hover { color: var(--text); }
 
 .challenge-score {
     font-family: var(--serif);
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 900;
-    color: #fff;
+    color: var(--accent);
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    text-shadow: 0 0 40px rgba(185,28,28,0.3);
+    letter-spacing: -0.03em;
 }
-
-.challenge-score span {
+.challenge-score .challenge-score-total {
     font-size: 1.5rem;
     color: var(--text-3);
     font-weight: 500;
+    text-shadow: none;
 }
 
 .challenge-rank {
@@ -1475,17 +1490,18 @@ a:hover { color: var(--text); }
 
 .challenge-qr {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 16px;
-    padding: 16px 20px;
+    gap: 10px;
+    padding: 20px;
     background: var(--bg-dark2);
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.08);
     margin-bottom: 28px;
 }
 .challenge-qr-img {
-    width: 80px;
-    height: 80px;
+    width: 96px;
+    height: 96px;
     border-radius: 8px;
     background: #fff;
     flex-shrink: 0;
@@ -1493,7 +1509,8 @@ a:hover { color: var(--text); }
 .challenge-qr-text {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    align-items: center;
+    gap: 2px;
     font-size: 0.875rem;
     color: var(--text-light2);
     line-height: 1.4;
@@ -1511,27 +1528,39 @@ a:hover { color: var(--text); }
 }
 
 .challenge-review-item {
-    padding: 14px 18px;
+    padding: 18px 20px;
     background: var(--bg-dark2);
-    border-radius: 8px;
-    border-left: 3px solid var(--text-3);
+    border-radius: 12px;
     font-size: 0.875rem;
     color: var(--text-light2);
     line-height: 1.6;
 }
 
-.challenge-review-item.correct {
-    border-left-color: var(--green);
-}
-
-.challenge-review-item.wrong {
-    border-left-color: var(--red);
-}
-
 .challenge-review-q {
-    font-weight: 600;
-    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    margin-bottom: 8px;
     color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.challenge-review-q::after {
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.05em;
+}
+.challenge-review-item.correct .challenge-review-q::after {
+    content: '✓ 正确';
+    background: rgba(22,163,74,0.15);
+    color: var(--green);
+}
+.challenge-review-item.wrong .challenge-review-q::after {
+    content: '✗ 错误';
+    background: rgba(220,38,38,0.15);
+    color: var(--red);
 }
 
 .challenge-review-answer {
@@ -1545,15 +1574,15 @@ a:hover { color: var(--text); }
     margin-top: 2px;
 }
 .challenge-review-explain {
-    margin-top: 8px;
-    padding: 10px 14px;
-    background: var(--bg-dark2);
-    border-radius: 6px;
+    margin-top: 10px;
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
     font-size: 0.8125rem;
     color: var(--text-light2);
     line-height: 1.7;
-    border: 1px solid rgba(255,255,255,0.06);
 }
+
 .challenge-review-item.correct .challenge-review-correct {
     color: var(--green);
 }
@@ -1582,7 +1611,7 @@ a:hover { color: var(--text); }
     }
 
     .challenge-score {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .challenge-nav {
